@@ -41,7 +41,6 @@ app.set("views", path.join(__dirname, "/views"))
 app.use(express.urlencoded({extended: true}))
 
 
-
 // first get route to display data from DB thru ejs template
 
 app.get("/", async (req, res) => {
@@ -60,18 +59,17 @@ app.get("/habit/:id", async(req, res) => {
 
 
 //get route to display new habit form
-
-
 app.get("/new", (req, res) => {
     res.render("new");
 })
 
+// Posting habits from front end in Mongodb
 
-
-
-
-
-
+app.post("/habits", async (req, res) => {
+    const newHabit = new Habit (req.body)
+    await newHabit.save();
+    res.redirect("/")
+})
 
 
 

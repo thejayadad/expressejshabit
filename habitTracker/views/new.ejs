@@ -1,7 +1,7 @@
 
     <%-include("partials/header")%>
     <div class="form">
-        <form>
+        <form action="/habits" method="POST">
             <div class="new-box">
                 <input type="text" name="habit" placeholder="Habit">
             </div>
@@ -10,7 +10,7 @@
             </div>
             <div class="new-box">
                 <label for="category">Category</label>
-                <select>
+                <select name="category">
                     <option class="study">study</option>
                     <option class="fitness">fitness</option>
                     <option class="health">health</option>
