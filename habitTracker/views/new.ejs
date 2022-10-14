@@ -1,23 +1,26 @@
 
     <%-include("partials/header")%>
     <div class="form">
-            <form>
-                <div class="new-box">
-                    <input placeholder="Habit">
-                </div>
-                <div class="new-box">
-                <input placeholder="Duration">
+        <form>
+            <div class="new-box">
+                <input type="text" name="habit" placeholder="Habit">
             </div>
             <div class="new-box">
-                <input placeholder="Category">
+                <input type="number" name="duration" placeholder="Duration">
+            </div>
+            <div class="new-box">
+                <label for="category">Category</label>
+                <select>
+                    <option class="study">study</option>
+                    <option class="fitness">fitness</option>
+                    <option class="health">health</option>
+                </select>
             </div>
             <div class="button">
                 <button>Submit</button>
             </div>
-            </form>
-        </div>
+        </form>
     </div>
-
 
 
     <%-include("partials/footer")%>

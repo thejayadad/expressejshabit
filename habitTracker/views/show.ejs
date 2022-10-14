@@ -1,0 +1,18 @@
+
+    <%-include("partials/header")%>
+    <div class="title">
+        <ul class="habits">
+            <li class="items">Habit</li>
+            <li class="items">Count</li>
+            <li class="items">Category</li>
+        </ul>
+    </div>
+    <div class="card">
+        <ul class="habits">
+            <li class="items"><%=habit.habit%></li>
+            <li class="items"><%=habit.duration%></li>
+            <li class="items"><%=habit.category%></li>
+        </ul>
+    </div>
+
+    <%-include("partials/footer")%>
